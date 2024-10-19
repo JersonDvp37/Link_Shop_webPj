@@ -50,13 +50,13 @@ if (isset($_POST['upload_submit']) && isset($_FILES['imgUpload'])) {
     <title>Document</title>
     <link rel="stylesheet" href="/Link_Shop_Updated/Model/Dashboard/DashStyle.css">
     <link rel="stylesheet" href="/Link_Shop_Updated/Model/Dashboard/DashBody.css">
-    <link rel="stylesheet" href="/Model/Dashboard/Postagens.css">
+    <link rel="stylesheet" href="/Link_Shop_Updated/Model/Dashboard/Postagens.css">
     <link rel="stylesheet" href="/Model/Dashboard/DashStyle.css">
     <link rel="stylesheet" href="/Model/Dashboard/DashBody.css">
-    <link rel="stylesheet" href="/Model/Dashboard/CardStyle.css">
+    <link rel="stylesheet" href="Link_Shop_Updated/Model/Dashboard/CardStyle.css">
 
-    <script defer src="/Model/Dashboard/DashBOM.JS"></script>
-    <script defer src="/Model/Dashboard/DashEvents.js"></script>
+    <script defer src="/Link_Shop_Updated/Model/Dashboard/DashBOM.JS"></script>
+    <script defer src="/Link_Shop_Updated/Model/Dashboard/DashEvents.js"></script>
 
 </head>
 
@@ -203,7 +203,7 @@ if (isset($_POST['upload_submit']) && isset($_FILES['imgUpload'])) {
                 <div for="inputLoad" class="uploadSection" id="SectionUpload" style="display: none;">
                     <div>
                         <label for="imageLoad" class="uploadBox" id="imageLoad_label">
-                            <img src="/Model/Dashboard/icon/envio.png" class="changeImage" id="changeImage"
+                            <img src="/Link_Shop_Updated/Model/Dashboard/icon/envio.png" class="changeImage" id="changeImage"
                                 style="display: none;">
                             <img src="/Link_Shop_Updated/Model/Dashboard/icon/galeria-de-imagens.png" alt=""
                                 class="uploadImage" id="imgUpload_btn">
@@ -256,11 +256,11 @@ if (isset($_POST['upload_submit']) && isset($_FILES['imgUpload'])) {
         <div class="postingSection" id="postagensSct" style="display: block;">
             
             <div class="horizontal_conteiner1">
-                   <img class="Left_btn_scroll" id="L_btn_scroll" src="/Model/Dashboard/icon/abaixo.png" alt="" style="display: none;">
+                   <img class="Left_btn_scroll" id="L_btn_scroll" src="/Link_Shop_Updated/Model/Dashboard/icon/abaixo.png" alt="" style="display: none;">
                 <div class="maisProd" id="maisProd">
 
                     <li class="prod1" id="prod1">
-                            <img src="/Model/home/produtos/Design promotion Flayer.jpg" alt="" class="designGrafico">
+                            <img src="/Link_Shop_Updated/Model/home/produtos/Design promotion Flayer.jpg" alt="" class="designGrafico">
                             <ul class="prodDsc">
                                 <li>Titulo </li>
                                 <div><a href="nnn" class="Exp"> Explorar </a></div>
@@ -268,7 +268,7 @@ if (isset($_POST['upload_submit']) && isset($_FILES['imgUpload'])) {
                     </li>
             
                         <li class="prod1" id="prod1">     
-                                <img src="/Model/home/produtos/3d-house-model-with-modern-architecture.jpg" alt="" class="plantas3D">
+                                <img src="/Link_Shop_Updated/Model/home/produtos/3d-house-model-with-modern-architecture.jpg" alt="" class="plantas3D">
                                 <ul class="prodDsc">
                                     <li>Titulo </li>
                                     <div><a href="nnn" class="Exp"> Explorar </a></div>
@@ -276,7 +276,7 @@ if (isset($_POST['upload_submit']) && isset($_FILES['imgUpload'])) {
                         </li>
             
                             <li class="prod1" id="prod1">
-                                    <img src="/Model/home/produtos/T-shirt design1.jpg" alt="" class="designCamisetes">
+                                    <img src="/Link_Shop_Updated/Model/home/produtos/T-shirt design1.jpg" alt="" class="designCamisetes">
                                     <ul class="prodDsc">
                                         <li>Titulo </li>
                                         <div><a href="nnn" class="Exp"> Explorar </a></div>
@@ -284,7 +284,7 @@ if (isset($_POST['upload_submit']) && isset($_FILES['imgUpload'])) {
                             </li>
             
                                 <li class="prod1" id="prod1">
-                                    <img src="/Model/home/produtos/colar.jpeg" alt="" class="colares">
+                                    <img src="/Link_Shop_Updated/Model/home/produtos/colar.jpeg" alt="" class="colares">
                                     <ul class="prodDsc">
                                         <li>Titulo </li>
                                         <div><a href="nnn" class="Exp"> Explorar </a></div>
@@ -292,7 +292,7 @@ if (isset($_POST['upload_submit']) && isset($_FILES['imgUpload'])) {
                                 </li>
             
                             <li class="prod1" id="prod1">
-                                    <img src="/Model/home/produtos/celulares.jpg" alt="" class="celulares">
+                                    <img src="/Link_Shop_Updated/Model/home/produtos/celulares.jpg" alt="" class="celulares">
                                     <ul class="prodDsc">
                                         <li>Titulo </li>
                                         <div><a href="nnn" class="Exp"> Explorar </a></div>
@@ -300,7 +300,7 @@ if (isset($_POST['upload_submit']) && isset($_FILES['imgUpload'])) {
                             </li>
 
                             <li class="prod1" id="prod1">
-                                <img src="/Model/home/produtos/Capa matematica.jpg" alt="" class="CapaMath">
+                                <img src="/Link_Shop_Updated/Model/home/produtos/Capa matematica.jpg" alt="" class="CapaMath">
                                 <ul class="prodDsc">
                                     <li>Titulo </li>
                                     <div><a href="nnn" class="Exp"> Explorar </a></div>
@@ -308,7 +308,7 @@ if (isset($_POST['upload_submit']) && isset($_FILES['imgUpload'])) {
                             </li>
 
                         <li class="prod1" id="prod1">
-                            <img src="/Model/home/produtos/Curso_Online_importacoes 2.jpg" alt="" class="curso">
+                            <img src="/Link_Shop_Updated/Model/home/produtos/Curso_Online_importacoes 2.jpg" alt="" class="curso">
                             <ul class="prodDsc">
                                 <li>Titulo </li>
                                 <div><a href="nnn" class="Exp"> Explorar </a></div>
@@ -316,7 +316,7 @@ if (isset($_POST['upload_submit']) && isset($_FILES['imgUpload'])) {
                         </li>
                 </div>
 
-                   <img class="Right_btn_scroll" id="R_btn_scroll" src="/Model/Dashboard/icon/abaixo.png" alt="">
+                   <img class="Right_btn_scroll" id="R_btn_scroll" src="/Link_Shop_Updated/Model/Dashboard/icon/abaixo.png" alt="">
             </div>
 
         </div>
