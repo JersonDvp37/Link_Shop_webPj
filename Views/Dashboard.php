@@ -21,17 +21,18 @@ if (isset($_POST['upload_submit']) && isset($_FILES['imgUpload'])) {
 
         $tituloPost = $_POST['postTitle'];
         $categoriaPost = $_POST['CategoriaPost'];
+        $precos = $_POST['precario'];
         $Descricao = $_POST['DscPost'];
         $tagPosts = $_POST['tagPost'];
 
-        $stmt = $conexao->prepare("INSERT INTO ProdPost (imagePath, titulo_post, Categoria_post, Descricao_post, tag_post)
-                                    VALUES (?, ?, ?, ?, ?)");
+        $stmt = $conexao->prepare("INSERT INTO ProdPost (imagePath, titulo_post, Categoria_post, precos, Descricao_post, tag_post)
+                                    VALUES (?, ?, ?, ?, ?, ?)");
 
         if ($stmt === false) {
             die('Erro na preparação da query: ' . htmlspecialchars($conexao->error));
         }
 
-        $stmt->bind_param("sssss", $image, $tituloPost, $categoriaPost, $Descricao, $tagPosts);
+        $stmt->bind_param("ssssss", $image, $tituloPost, $categoriaPost, $precos, $Descricao, $tagPosts);
 
         if (!$stmt->execute()) {
             die('Erro na execução da query: ' . htmlspecialchars($stmt->error));
@@ -39,7 +40,6 @@ if (isset($_POST['upload_submit']) && isset($_FILES['imgUpload'])) {
     }
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -51,9 +51,7 @@ if (isset($_POST['upload_submit']) && isset($_FILES['imgUpload'])) {
     <link rel="stylesheet" href="/Link_Shop_Updated/Model/Dashboard/DashStyle.css">
     <link rel="stylesheet" href="/Link_Shop_Updated/Model/Dashboard/DashBody.css">
     <link rel="stylesheet" href="/Link_Shop_Updated/Model/Dashboard/Postagens.css">
-    <link rel="stylesheet" href="/Model/Dashboard/DashStyle.css">
-    <link rel="stylesheet" href="/Model/Dashboard/DashBody.css">
-    <link rel="stylesheet" href="Link_Shop_Updated/Model/Dashboard/CardStyle.css">
+    <link rel="stylesheet" href="/Link_Shop_Updated/Model/Dashboard/CardStyle.css">
 
     <script defer src="/Link_Shop_Updated/Model/Dashboard/DashBOM.JS"></script>
     <script defer src="/Link_Shop_Updated/Model/Dashboard/DashEvents.js"></script>
@@ -76,16 +74,16 @@ if (isset($_POST['upload_submit']) && isset($_FILES['imgUpload'])) {
                 </li>
                 <div class="dashNavbar">
                     <ul class="ulNavbar">
-                        <li><img src="/Link_Shop_Updated/Model/Dashboard/icon/chamine-de-casa.png"
+                        <li id="btn_sidebar" style="background-color: rgb(0, 25, 31, 0.7); padding: 10px 10px; box-Shadow: 0px 0px 4px #009675;" ><img src="/Link_Shop_Updated/Model/Dashboard/icon/chamine-de-casa.png"
                                 alt=""><span>Home</span></li>
-                        <li onclick="postagensEvt()"><img src="/Link_Shop_Updated/Model/Dashboard/icon/categoria.png"
+                        <li id="btn_sidebar2"  onclick="postagensEvt()"><img src="/Link_Shop_Updated/Model/Dashboard/icon/categoria.png"
                                 alt=""><span>Postagens</span></li>
-                        <li><img src="/Link_Shop_Updated/Model/Dashboard/icon/tendencia-de-seta-para-cima22.png"
+                        <li id="btn_sidebar3" ><img src="/Link_Shop_Updated/Model/Dashboard/icon/tendencia-de-seta-para-cima22.png"
                                 alt=""><span>Tendencia</span></li>
-                        <li><img src="/Link_Shop_Updated/Model/Dashboard/icon/comentario-estrela-alternativo.png"
+                        <li id="btn_sidebar4" ><img src="/Link_Shop_Updated/Model/Dashboard/icon/comentario-estrela-alternativo.png"
                                 alt=""><span>Comentarios</span></li>
-                        <li><img src="/Link_Shop_Updated/Model/Dashboard/icon/editar.png" alt=""><span>Notas</span></li>
-                        <li><img src="/Link_Shop_Updated/Model/home/MediaFiles/alvo.png" alt=""><span>Definicoes</span>
+                        <li id="btn_sidebar5" ><img src="/Link_Shop_Updated/Model/Dashboard/icon/editar.png" alt=""><span>Notas</span></li>
+                        <li id="btn_sidebar6" ><img src="/Link_Shop_Updated/Model/home/MediaFiles/alvo.png" alt=""><span>Definicoes</span>
                         </li>
                     </ul>
                 </div>
@@ -119,7 +117,7 @@ if (isset($_POST['upload_submit']) && isset($_FILES['imgUpload'])) {
                     <li class="divLine2"></li>
                 </div>
             </div>
-            <div class="pubSection">
+            <div class="pubSection" id="pubSection">
                 <div class="publicationBox">
                     <span class="pubTitle">Publication Section</span>
                     <ul class="Caixas">
@@ -240,6 +238,10 @@ if (isset($_POST['upload_submit']) && isset($_FILES['imgUpload'])) {
                             <option value="Beleza">Beleza</option>
                             <option value="Artes">Artes</option>
                         </select>
+                            <div class="precosBox">
+                                <label for="precos" class="tituloPreco">Precos</label>
+                                <input type="text" class="precos" id="precos" name="precario" placeholder="Precos">
+                            </div>
                     </div>
                     <div class="comentDsc">
                         <textarea name="DscPost" class="textarea" id="textComent"
@@ -253,16 +255,16 @@ if (isset($_POST['upload_submit']) && isset($_FILES['imgUpload'])) {
             </form>
 
         <!--SECCAO DE POSTAGENS EFECTUADSAS-->
-        <div class="postingSection" id="postagensSct" style="display: block;">
+        <div class="postingSection" id="postagensSct" style="display: none;">
             
             <div class="horizontal_conteiner1">
                    <img class="Left_btn_scroll" id="L_btn_scroll" src="/Link_Shop_Updated/Model/Dashboard/icon/abaixo.png" alt="" style="display: none;">
                 <div class="maisProd" id="maisProd">
 
                     <li class="prod1" id="prod1">
-                            <img src="/Link_Shop_Updated/Model/home/produtos/Design promotion Flayer.jpg" alt="" class="designGrafico">
+                            <img src="/Link_Shop_Updated/Model/home/produtos/colar.jpeg" alt="" class="designGrafico">
                             <ul class="prodDsc">
-                                <li>Titulo </li>
+                                <li>fdfdfdfd </li>
                                 <div><a href="nnn" class="Exp"> Explorar </a></div>
                             </ul>
                     </li>
@@ -270,7 +272,7 @@ if (isset($_POST['upload_submit']) && isset($_FILES['imgUpload'])) {
                         <li class="prod1" id="prod1">     
                                 <img src="/Link_Shop_Updated/Model/home/produtos/3d-house-model-with-modern-architecture.jpg" alt="" class="plantas3D">
                                 <ul class="prodDsc">
-                                    <li>Titulo </li>
+                                    <li>Titulodsddsfd </li>
                                     <div><a href="nnn" class="Exp"> Explorar </a></div>
                                 </ul>
                         </li>
@@ -286,7 +288,7 @@ if (isset($_POST['upload_submit']) && isset($_FILES['imgUpload'])) {
                                 <li class="prod1" id="prod1">
                                     <img src="/Link_Shop_Updated/Model/home/produtos/colar.jpeg" alt="" class="colares">
                                     <ul class="prodDsc">
-                                        <li>Titulo </li>
+                                        <li>Titulodfvdvdf </li>
                                         <div><a href="nnn" class="Exp"> Explorar </a></div>
                                     </ul>
                                 </li>

@@ -86,7 +86,7 @@
 .prodDsc{
     position: relative;
     list-style: none;
-    font-size: 16px;
+    font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
     color:   rgb(0, 112, 88);
     margin-left: -8px;
@@ -102,26 +102,3 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-/*.Exp68{
-    position: absolute;
-    padding: 5px 30px;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 266px;
-    margin-left: 10px;
-    border-radius: 3px;
-    color:  rgb(0, 150, 117);
-    background-color: rgb(0, 255, 200);
-}
-.Exp69:hover{
-    position: absolute;
-    padding: 5px 42px;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 266px;
-    margin-left: 51px;
-    border-radius: 3px;
-    color:  rgb(0, 150, 117);
-    background-color: rgb(0, 255, 200);
-    box-shadow: 0px 0px 0px;
-}*/

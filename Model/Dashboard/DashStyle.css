@@ -19,7 +19,7 @@ body{
     background-color: var(--dshgGrey);
 }
 .userBack{ 
-    width: 1300px;
+    width: 1320px;
     height: 630px;  
     border-radius: 25px;
     background-color: var(--dshBlackblue);
@@ -32,7 +32,7 @@ body{
     overflow: hidden;
 }
 .box_display{
-    width: 1150px;
+    width: 1170px;
     height: 630px;
     background-color: var(--pureWhite);
     border-radius: 25px;
@@ -41,7 +41,7 @@ body{
     position:  absolute;
     transform: translate(-50%, -50%);
     top: 50%;
-    margin-left: 730px;
+    margin-left: 735px;
     /*box-shadow: 0px 0px 15px rgb(231, 235, 234, 0.7);*/
     overflow-y: scroll;
     overflow: hidden;
@@ -87,7 +87,7 @@ li{
     margin-top: 5px;
 }
 .linha{
-    width: 125px;
+    width: 130px;
     height: 1px;
     background: linear-gradient(to left,  var(--boxShadow), var(--primaria));
     margin-left: -35px;
@@ -161,9 +161,6 @@ li{
     margin-top: 7.7px;
     margin-left: 9px; 
 }
-.button_bar span:hover{
-    
-}
 
 /*NavBar Dashboard*/
 .dashNavbar{
@@ -201,7 +198,7 @@ ul{
     font-size: 12px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to left,  var(--boxShadow), var(--primaria));
+    background:  var(--primaria);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent
     ;
